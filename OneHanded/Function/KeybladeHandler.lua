@@ -1,5 +1,6 @@
 repeat wait() until script.Parent.Parent.Parent.Parent:findFirstChild("Humanoid") ~= nil
 
+print("keybladehandler running")
 tool = script.Parent.Parent.Parent
 c = tool.Parent
 block = script.Wave
