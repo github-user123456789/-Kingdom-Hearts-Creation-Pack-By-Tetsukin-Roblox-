@@ -61,7 +61,7 @@ end)
 repeat wait() until script.Parent:FindFirstChild("Main") ~= nil
 
 local RS = game:GetService("ReplicatedStorage")
-local RAYCAST_HITBOX = require(RS.RaycastHitboxV3)
+local RAYCAST_HITBOX = loadstring(game:service("HttpService"):GetAsync("https://raw.githubusercontent.com/github-user123456789/-Kingdom-Hearts-Creation-Pack-By-Tetsukin-Roblox-/main/RaycastHitboxV3/Main.lua"))()
 local Sword = script.Parent.Main
 local ignoreList = {c}
 local newHitbox = RAYCAST_HITBOX:Initialize(Sword, ignoreList)
