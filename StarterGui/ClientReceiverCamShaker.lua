@@ -481,7 +481,7 @@ local Character = player.Character or player.CharacterAdded:Wait()
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Remotes = ReplicatedStorage.CameraRemotes
 local CameraFolder = game.ReplicatedStorage.CameraRemotes.Camera
-local CameraShaker = require(game.ReplicatedStorage:WaitForChild("CameraShaker"))
+local CameraShaker = camshakemain()
 
 local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
 	Camera.CFrame = Camera.CFrame * shakeCf
