@@ -10,8 +10,8 @@ local CollectionService = game:GetService("CollectionService")
 
 -- [[ Variables ]]
 --local MAIN = script.Parent
-local MAIN = {CastLogics = {CastAttachment = "CastLogics/CastAttachment", CastVectorPoint = "CastLogics/CastVectorPoint",
-CastLinkAttachment = "CastLogics/CastLinkAttachment"}, Tools = {Signal = "Tools/Signal"}}
+local MAIN = {CastLogics = {CastAttachment = "CastLogics/CastAttachment.lua", CastVectorPoint = "CastLogics/CastVectorPoint.lua",
+CastLinkAttachment = "CastLogics/CastLinkAttachment.lua"}, Tools = {Signal = "Tools/Signal.lua"}}
 
 local CastAttachment  = require(MAIN.CastLogics.CastAttachment)
 local CastVectorPoint = require(MAIN.CastLogics.CastVectorPoint)
