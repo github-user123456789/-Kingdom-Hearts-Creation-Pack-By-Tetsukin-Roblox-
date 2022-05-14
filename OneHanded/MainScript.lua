@@ -447,7 +447,7 @@ local function RHMain()
 	local git = "https://raw.githubusercontent.com/github-user123456789/-Kingdom-Hearts-Creation-Pack-By-Tetsukin-Roblox-/main/RaycastHitboxV3/"
 	local fakescript = {MainHandler = mainhandlerlua, HitboxObject = hitboxlua}
 	local function require(a)
-	  return fakescript[a]()
+	  return a()
 	end
 
 	local Handler = require(fakescript.MainHandler)
