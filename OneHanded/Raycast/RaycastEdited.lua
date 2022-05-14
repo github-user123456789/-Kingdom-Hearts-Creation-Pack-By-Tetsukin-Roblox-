@@ -111,7 +111,7 @@ script.Parent.MainScript.Function.OnServerEvent:connect(function(Player, Action,
 			local dmg = math.random(mindmg,maxdmg)
 			local gui = script.DMGGui:clone()
 			coroutine.wrap(function()
-				repeat wait() until gui and gui.Parent and gui.Parent.Name == "Head"
+				repeat wait() until gui and gui.Parent and typeof(gui.Parent) == "Instance" and gui.Parent:IsA("BasePart") and gui.Parent.Name == "Head"
 
 				local dmg = tonumber(script.Parent.Dmg.Text)
 				local gui = gui
