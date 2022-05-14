@@ -71,7 +71,7 @@ script.Parent.MainScript.Function.OnServerEvent:connect(function(Player, Action,
 
 	local keys = Keys
 	
-	print(keys, Keys)
+	print(keys)
 	if script.Parent:FindFirstChild("Main") == nil and getkey == false then
 		getkey = true
 		keys.RightHand:WaitForChild(Customizations.RKey):Clone().Parent = script.Parent
