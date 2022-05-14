@@ -37,7 +37,7 @@ script.Parent.OnServerEvent:connect(function(Player, Action, humanoid, V1)
 		effect.Name = "Power2"
 		effect.Disabled = false
 		]]
-		local effect = NS(importraw("OneHanded/Function/Wave/Ars/Power.lua"), nil); effect.Name = "Power2"
+		--local effect = NS(importraw("OneHanded/Function/Wave/Ars/Power.lua"), Ars); effect.Name = "Power2"
 		block.Equip:Play()
 		
 		local Anim = c.Humanoid:LoadAnimation(EquipAnim)
