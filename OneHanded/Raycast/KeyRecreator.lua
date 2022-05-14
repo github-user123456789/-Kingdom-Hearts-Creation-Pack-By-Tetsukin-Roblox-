@@ -82,22 +82,29 @@ local a = function()
 		})
 	end
 	
-	local kingdomkey = NS(importraw("OneHanded/Raycast/Keys/KingdomKeyLeft.lua"), lh); kingdomkey.Name = "KingdomKey"
-	local key = Utils:Create({"Part", kingdomkey}, {
-		Orientation = Vector3.new(0, 90, 180),
-		Size = Vector3.new(4.951, 0.501, 1.651),
-		Color = Color3.fromRGB(239, 184, 56),
-		Name = "Main2",
-	}); kingdomkeyinst(key)
+	local keydata = {}
 	
-	kingdomkey = NS(importraw("OneHanded/Raycast/Keys/KingdomKeyRight.lua"), rh); kingdomkey.Name = "KingdomKey"
-	key = Utils:Create({"Part", kingdomkey}, {
-		Orientation = Vector3.new(0, 90, 180),
-		Size = Vector3.new(4.951, 0.501, 1.651),
-		Color = Color3.fromRGB(239, 184, 56),
-		Name = "Main",
-	}); kingdomkeyinst(key)
+	function keydata:LeftHand()
+		local kingdomkey = NS(importraw("OneHanded/Raycast/Keys/KingdomKeyLeft.lua"), lh); kingdomkey.Name = "KingdomKey"
+		local key = Utils:Create({"Part", kingdomkey}, {
+			Orientation = Vector3.new(0, 90, 180),
+			Size = Vector3.new(4.951, 0.501, 1.651),
+			Color = Color3.fromRGB(239, 184, 56),
+			Name = "Main2",
+		}); kingdomkeyinst(key)
+		return kingdomkey
+	end
 	
-	return fold
+	function keydata:RightHand()
+		local kingdomkey = NS(importraw("OneHanded/Raycast/Keys/KingdomKeyRight.lua"), rh); kingdomkey.Name = "KingdomKey"
+		local key = Utils:Create({"Part", kingdomkey}, {
+			Orientation = Vector3.new(0, 90, 180),
+			Size = Vector3.new(4.951, 0.501, 1.651),
+			Color = Color3.fromRGB(239, 184, 56),
+			Name = "Main",
+		}); kingdomkeyinst(key)
+	end
+	
+	return fold, keydata
 end
 return a
