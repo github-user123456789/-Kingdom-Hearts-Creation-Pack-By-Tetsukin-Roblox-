@@ -5,7 +5,7 @@ local function require(a)
 end
 
 local Cast = {}
-local Debugger = require("CastLogics/Debug/Debugger")
+local Debugger = require("CastLogics/Debug/Debugger.lua")
 
 function Cast:solve(Point, bool)
 	if bool then
