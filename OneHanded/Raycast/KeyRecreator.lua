@@ -43,6 +43,7 @@ end
 local a = function()
 	local fold = Instance.new("Folder")
 	local lh = Utils:Create({"Folder", fold}, {Name = "LeftHand"})
+	local rh = Utils:Create({"Folder", fold}, {Name = "RightHand"})
 	
 	local function kingdomkeyinst(key)
 		addattach("DmgPoint", Vector3.new(-2.25, 0, 0)).Parent = key
@@ -81,7 +82,7 @@ local a = function()
 		})
 	end
 	
-	local kingdomkey = NS(importraw("Raycast/Keys/KingdomKeyLeft.lua"))
+	local kingdomkey = NS(importraw("Raycast/Keys/KingdomKeyLeft.lua"), lh); kingdomkey.Name = "KingdomKey"
 	local key = Utils:Create({"Part", kingdomkey}, {
 		Orientation = Vector3.new(0, 90, 180),
 		Size = Vector3.new(4.951, 0.501, 1.651),
@@ -89,7 +90,7 @@ local a = function()
 		Name = "Main2",
 	}); kingdomkeyinst(key)
 	
-	kingdomkey = NS(importraw("Raycast/Keys/KingdomKeyRight.lua"))
+	kingdomkey = NS(importraw("Raycast/Keys/KingdomKeyRight.lua"), rh); kingdomkey.Name = "KingdomKey"
 	key = Utils:Create({"Part", kingdomkey}, {
 		Orientation = Vector3.new(0, 90, 180),
 		Size = Vector3.new(4.951, 0.501, 1.651),
