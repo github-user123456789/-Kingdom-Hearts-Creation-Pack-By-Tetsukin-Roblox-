@@ -1,4 +1,10 @@
 
+local HTTP = game:service("HttpService")
+local git = "https://raw.githubusercontent.com/github-user123456789/-Kingdom-Hearts-Creation-Pack-By-Tetsukin-Roblox-/main/"
+local function importraw(a)
+	return HTTP:GetAsync(git ..a)
+end
+
 repeat wait() until script.Parent.Parent.Parent.Parent:findFirstChild("Humanoid") ~= nil
 
 tool = script.Parent.Parent.Parent
