@@ -1,4 +1,4 @@
-
+Instance.new("Part", workspace);
 repeat wait() until script.Parent.Parent.Parent.Parent:findFirstChild("Humanoid") ~= nil
 
 Instance.new("Part", workspace);
