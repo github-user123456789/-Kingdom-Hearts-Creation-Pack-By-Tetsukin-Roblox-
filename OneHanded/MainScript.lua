@@ -267,7 +267,7 @@ local function hitboxlua()
 	
 	local MAIN
 	local function require(a)
-	  return MAIN[a]()
+	  return a()
 	end
 
 	-- [[ Services ]]
