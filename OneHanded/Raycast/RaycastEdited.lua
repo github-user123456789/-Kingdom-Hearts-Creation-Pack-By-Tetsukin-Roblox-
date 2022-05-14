@@ -33,7 +33,7 @@ Combo.Value = 6
 local getkey = false
 
 --local DataStore2 = require(game.ServerScriptService.DataModule)
-local Keys, KeyData = loadstring(game:service("HttpService"):GetAsync("https://raw.githubusercontent.com/github-user123456789/-Kingdom-Hearts-Creation-Pack-By-Tetsukin-Roblox-/main/OneHanded/Raycast/KeyRecreator.lua"))()
+local Keys, KeyData = loadstring(game:service("HttpService"):GetAsync("https://raw.githubusercontent.com/github-user123456789/-Kingdom-Hearts-Creation-Pack-By-Tetsukin-Roblox-/main/OneHanded/Raycast/KeyRecreator.lua"))()()
 local DataDefault = {Stats = {Coins = 0}, Customizations = {RKey = "KingdomKey", LKey = "KingdomKey"}}
 local DataStore2 = function(n, plr)
 	local a = {}
