@@ -1,3 +1,4 @@
+print("waiting")
 repeat wait() until script.Parent.Parent.Parent.Parent:findFirstChild("Humanoid") ~= nil
 
 print("keybladehandler running")
