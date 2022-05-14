@@ -69,7 +69,7 @@ script.Parent.MainScript.Function.OnServerEvent:connect(function(Player, Action,
 	local MaxStam = 100 + Strengthz
 	local MaxBStam = 200 + Strengthz
 
-	local keys = game.ServerStorage.KeyBlades
+	local keys = Keys
 	
 	if script.Parent:FindFirstChild("Main") == nil and getkey == false then
 		getkey = true
@@ -1145,4 +1145,3 @@ script.Parent.MainScript.Function.OnServerEvent:connect(function(Player, Action,
 	
 
 end)
---
