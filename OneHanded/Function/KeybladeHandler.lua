@@ -85,7 +85,7 @@ script.Parent.OnServerEvent:connect(function(Player, Action, humanoid, V1)
 		wait(0.5)
 		
 		block.Transparency = 1
-		effect:destroy()
+		--effect:destroy()
 		block.Size = Vector3.new(1,5,1)
 		block.Ars.Outer.Enabled = false
 		
