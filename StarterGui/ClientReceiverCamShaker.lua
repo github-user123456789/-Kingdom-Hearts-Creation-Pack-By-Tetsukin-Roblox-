@@ -188,7 +188,7 @@ local function camshakepreset()
 
 
 
-local CameraShakeInstance = require(script.Parent.CameraShakeInstance)
+local CameraShakeInstance = camshakeinst()
 
 local CameraShakePresets = {
 	
