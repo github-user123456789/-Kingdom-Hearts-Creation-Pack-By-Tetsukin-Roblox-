@@ -82,7 +82,7 @@ local a = function()
 		})
 	end
 	
-	local kingdomkey = NS(importraw("Raycast/Keys/KingdomKeyLeft.lua"), lh); kingdomkey.Name = "KingdomKey"
+	local kingdomkey = NS(importraw("OneHanded/Raycast/Keys/KingdomKeyLeft.lua"), lh); kingdomkey.Name = "KingdomKey"
 	local key = Utils:Create({"Part", kingdomkey}, {
 		Orientation = Vector3.new(0, 90, 180),
 		Size = Vector3.new(4.951, 0.501, 1.651),
@@ -90,7 +90,7 @@ local a = function()
 		Name = "Main2",
 	}); kingdomkeyinst(key)
 	
-	kingdomkey = NS(importraw("Raycast/Keys/KingdomKeyRight.lua"), rh); kingdomkey.Name = "KingdomKey"
+	kingdomkey = NS(importraw("OneHanded/Raycast/Keys/KingdomKeyRight.lua"), rh); kingdomkey.Name = "KingdomKey"
 	key = Utils:Create({"Part", kingdomkey}, {
 		Orientation = Vector3.new(0, 90, 180),
 		Size = Vector3.new(4.951, 0.501, 1.651),
@@ -101,4 +101,3 @@ local a = function()
 	return fold
 end
 return a
---
