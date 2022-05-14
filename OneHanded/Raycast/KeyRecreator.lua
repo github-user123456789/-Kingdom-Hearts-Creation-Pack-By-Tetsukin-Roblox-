@@ -93,6 +93,7 @@ local a = function()
 				Size = Vector3.new(4.951, 0.501, 1.651),
 				Color = Color3.fromRGB(239, 184, 56),
 				Name = "Main2",
+				CanCollide = false
 			}); kingdomkeyinst(key)
 		end
 		return kingdomkey
@@ -107,6 +108,7 @@ local a = function()
 				Size = Vector3.new(4.951, 0.501, 1.651),
 				Color = Color3.fromRGB(239, 184, 56),
 				Name = "Main",
+				CanCollide = false
 			}); kingdomkeyinst(key)
 		end
 		return kingdomkey
