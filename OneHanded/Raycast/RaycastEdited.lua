@@ -1,3 +1,13 @@
+
+-- IMPORT FUNCS
+
+local git = "https://raw.githubusercontent.com/github-user123456789/-Kingdom-Hearts-Creation-Pack-By-Tetsukin-Roblox-/main/"
+local function importraw(a)
+	return HTTP:GetAsync(git ..a)
+end
+
+------------------------------------
+
 Enabled = true
 ButtonDown = false
 local MoveGlobe = false
@@ -100,8 +110,43 @@ script.Parent.MainScript.Function.OnServerEvent:connect(function(Player, Action,
 
 			local dmg = math.random(mindmg,maxdmg)
 			local gui = script.DMGGui:clone()
+			coroutine.wrap(function()
+				repeat wait() until gui.Parent.Name == "Head"
+
+				local dmg = tonumber(script.Parent.Dmg.Text)
+				local gui = gui
+
+				local mindmg = gui["Gui handler"].min.Value
+				local maxdmg = gui["Gui handler"].max.Value
+				local red = maxdmg / 1.25
+
+				if dmg >= red then
+					gui.Dmg.TextColor3 = Color3.new(1, 0.25, 0.25)
+					gui.Size = UDim2.new(4,0,2,0)
+				else
+					gui.Dmg.TextColor3 = Color3.new(1, 1, 1)
+					gui.Size = UDim2.new(3,0,1.5,0)
+				end
+				gui.StudsOffset = Vector3.new(math.random(-2,2),0,0)
 
 
+				local TweenService = game:GetService("TweenService")
+				local TweenNumber = gui["Gui handler"].TweenNumber
+				function AnimateNumber(n)
+					TweenService:Create(TweenNumber, TweenInfo.new(.3), {Value = n}):Play()
+				end
+
+				gui["Gui handler"].TweenNumber:GetPropertyChangedSignal("Value"):Connect(function()
+					gui.Dmg.Text = TweenNumber.Value
+				end)
+
+				AnimateNumber(dmg)
+
+
+				wait(1)
+				gui:destroy()
+			end)()
+			
 			if humanoid.Parent:findFirstChild("isPlayer") == nil and humanoid.Parent:findFirstChild("BlockStam") ~= nil then
 				local VStam = humanoid.Parent:WaitForChild("BlockStam")
 
