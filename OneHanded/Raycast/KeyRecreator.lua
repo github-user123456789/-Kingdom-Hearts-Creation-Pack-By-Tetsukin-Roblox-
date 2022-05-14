@@ -56,7 +56,7 @@ local a = function()
 		local tr2 = addattach("TrailPoint", Vector3.new(-2.381399154663086, 0.01102641224861145, -0.0077114105224609375)); tr2.Parent = key
 		
 		Utils:Create({"Trail", key}, {
-			Color = Color3.fromRGB(159, 159, 159),
+			Color = ColorSequence.new(Color3.fromRGB(159, 159, 159)),
 			LightEmission = .6,
 			LightInfluence = 1,
 			Texture = "rbxassetid://4480871448",
